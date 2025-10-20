@@ -8,15 +8,8 @@ resource "github_repository" "main" {
 
   visibility = "public"
   auto_init  = true
-
-  template {
-    owner                = "github"
-    repository           = "terraform-template-module"
-    include_all_branches = true
-  }
 }
-
-
+  
 
 # resource for creating a branch with environment
 
