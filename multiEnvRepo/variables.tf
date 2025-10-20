@@ -20,23 +20,10 @@ variable "repository_description" {
     default     = "made with Terraform"
 }
 
-variable "repository_name" {
-    description = "Name of repo"
-    type        = string
-    
-}
-
-variable "repository_development_environment" {
-    type        = string
+variable "repository_environments" {
+    type        = list(string)
+    description = "List of environments"
+    default     = ["development", "staging", "production"]
 
 }
 
-variable "repository_staging_environment" {
-    type        = string
-
-}
-
-variable "repository_production_environment" {
-    type        = string
-
-}
